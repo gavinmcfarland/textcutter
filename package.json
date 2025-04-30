@@ -1,0 +1,15 @@
+{
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "plugma dev",
+		"build": "plugma build",
+		"preview": "plugma preview",
+		"release": "plugma release",
+		"test": "plugma test"
+	},
+	"dependencies": {
+		"@figma/plugin-typings": "^1.110.0",
+		"plugma": "^2.0.0-24"
+	}
+}

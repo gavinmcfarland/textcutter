@@ -1,43 +1,51 @@
 # TextCutter
 
-TextCutter is a lightweight plugin for Figma to split or join text layers.
+## Quickstart
 
-You can start to use it via the [Figma Community plugin page](https://www.figma.com/community/plugin/739131137116544548/TextCutter).
+This plugin was created with [Plugma](https://github.com/gavinmcfarland/plugma) using vanilla JavaScript.
 
-This plugin avoids the manual splitting of multiline text layers into single text layers and makes you work faster.
+### Requirements
 
-There is no user interface. It's focused on speed of interaction.
+- [Node.js](https://nodejs.org/en)
+- [Figma desktop app](https://www.figma.com/downloads/)
 
-Next to the core the core command “Split text”, we've added three additional commands: Join text, Split words and Remove bullets.
+### Install and Import
 
-## How to use
+1. Install the dependencies and watch for changes while developing:
 
-* Split text
-    * Select a text layer with multiple lines of text
-    * Run the plugin
-    * Your results (new layers) will appear on your current page in the same spot
+    ```bash
+    npm install
+    npm run dev
+    ```
 
-* Join text
-    * Select multiple text layers (that are underneath each other)
-    * Run the plugin
-    * Your results (a merged layer) will appear on the page in the same spot
+2. Open the Figma desktop app and import the plugin:
 
-* Split words
-    * Select a text layer with multiple words
-    * Run the "Split words" command
-    * Your results (new layers for each word) will appear on your current page in the same spot
+    - Open a file in Figma.
+    - Search for "Import plugin from manifest..." using the [Quick Actions](https://help.figma.com/hc/en-us/articles/360040328653-Use-shortcuts-and-quick-actions#Use_quick_actions) bar.
+    - Choose the `manifest.json` file from the `dist` folder.
 
-* Remove bullets
-    * Select one or multiple text layers containing bullet-like characters (such as •)
-    * Run the "Remove bullets" command
-    * The bullets will be removed from the text
+3. Manage `manifest` details from inside `package.json`.
 
-## A tip
+### Browser Preview
 
-You can use this plugin along with OCR software that helps extract text from images based on a screenshot, such as [TextSniper](https://textsniper.app/) or [CleanShot](https://cleanshot.com/).
+Run this command to preview your plugin in the browser during development.
 
-We'd also like to take the opportunity here to promote our OCR plugin for Figma: [Screenshot to Layout](https://screenshottolayout.com/).
+```bash
+npm run preview
+```
 
-## Promote TextCutter
+_Make sure the plugin is open in the Figma desktop app._
 
-If you like TextCutter, share it with your friends! TextCutter will remain a free plugin forever.
+### Before Publishing
+
+Before publishing your plugin, make sure to create a build. If not, it will still point to the dev server and won't work properly for users.
+
+```bash
+npm run build
+```
+
+Now you can publish the plugin from the Figma desktop app.
+
+### Advanced
+
+See the [Plugma docs](https://plugma.dev/docs) for further information.
