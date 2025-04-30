@@ -1,6 +1,6 @@
-import { getUniqueFonts } from '../utils/getUniqueFonts.js'
-import { loadFonts } from '../utils/loadFonts.js'
-import { reapplyFormatting } from '../utils/reapplyFormatting.js'
+import { getUniqueFonts } from '../utils/get-unique-fonts.js'
+import { loadFonts } from '../utils/load-fonts.js'
+import { reapplyFormatting } from '../utils/reapply-formatting.js'
 
 /**
  * Remove bullets from selected text layers

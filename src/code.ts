@@ -1,12 +1,12 @@
-import { removeBullets } from './commands/removeBullets.js'
-import { splitWords } from './commands/splitWords.js'
+import { removeBullets } from './commands/remove-bullets.js'
+import { splitWords } from './commands/split-words.js'
 import { split } from './commands/split.js'
 import { join } from './commands/join.js'
-import { nodeInInstance } from './utils/nodeInInstance.js'
-import { getUniqueFonts } from './utils/getUniqueFonts.js'
-import { loadFonts } from './utils/loadFonts.js'
-import { applyFormattingRanges } from './utils/applyFormattingRanges.js'
-import { getFormattingRanges } from './utils/getFormattingRanges.js'
+import { nodeInInstance } from './utils/node-in-instance.js'
+import { getUniqueFonts } from './utils/get-unique-fonts.js'
+import { loadFonts } from './utils/load-fonts.js'
+import { applyFormattingRanges } from './utils/apply-formatting-ranges.js'
+import { getFormattingRanges } from './utils/get-formatting-ranges.js'
 // @author Johan Ronsse
 // @version 3.0
 // @description
@@ -18,25 +18,34 @@ import { getFormattingRanges } from './utils/getFormattingRanges.js'
   This plugin avoids the manual splitting of layers.
 */
 
-async function main(): Promise<string | undefined> {
+export default async function () {
+	console.clear()
+	console.log('Starting plugin')
+
+	console.log(process.env.NODE_ENV)
+
+	if (process.env.NODE_ENV === 'test') {
+		figma.showUI(__html__, { themeColors: true })
+	}
+
+	let message = ''
+
 	switch (figma.command) {
 		case 'removeBullets':
-			return await removeBullets()
+			message = await removeBullets()
+			break
 		case 'splitWords':
-			return await splitWords()
+			message = await splitWords()
+			break
 		case 'split':
-			return await split()
+			message = await split()
+			break
 		case 'join':
 		case 'joinWithBreaks':
-			return await join(figma.command === 'joinWithBreaks')
+			message = await join(figma.command === 'joinWithBreaks')
 	}
-}
 
-export default function () {
-	main().then((message: string | undefined) => {
-		console.clear()
-		console.log('Starting plugin')
-		figma.showUI(__html__, { themeColors: true })
-		// figma.closePlugin(message)
-	})
+	// if (message) {
+	// 	figma.closePlugin(message)
+	// }
 }

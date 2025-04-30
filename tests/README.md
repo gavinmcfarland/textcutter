@@ -1,16 +1,20 @@
+Fix bug: process.env.NODE_ENV is not set to test
+
 # Tests
 
 1. Open the Figma desktop app
 
-2. Open a blank Figma file
+2. For the time being you need to include a dummy ui in the `manifest.json` file and prevent the plugin from closing.
 
-3. To run tests first start the dev server with WebSockets enabled:
+3. Open a blank Figma file
+
+4. To run tests first start the dev server with WebSockets enabled and the mode set to test:
 
     ```bash
-    npm run dev -- --ws
+    npm run dev -- -ws -m test
     ```
 
-4. Then run vitest:
+5. Then run vitest:
 
     ```bash
     npx vitest
@@ -22,7 +26,7 @@
 
 Plugma is still in beta and has some bugs.
 
-1. When you run a test you need to run each test individually.
+1. When you want to create more than one test file you need to run each test file individually. Hopefully this will be resolved in the next release.
 
 ```bash
 npx vitest --run tests/split-text.test.ts

@@ -1,7 +1,7 @@
-import { nodeInInstance } from '../utils/nodeInInstance.js'
-import { getUniqueFonts } from '../utils/getUniqueFonts.js'
-import { applyFormattingRanges } from '../utils/applyFormattingRanges.js'
-import { getFormattingRanges } from '../utils/getFormattingRanges.js'
+import { nodeInInstance } from '../utils/node-in-instance.js'
+import { getUniqueFonts } from '../utils/get-unique-fonts.js'
+import { applyFormattingRanges } from '../utils/apply-formatting-ranges.js'
+import { getFormattingRanges } from '../utils/get-formatting-ranges.js'
 
 /**
  * Join multiple text nodes into a single text node

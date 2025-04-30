@@ -1,4 +1,4 @@
-import { getUniqueFonts } from './getUniqueFonts.js'
+import { getUniqueFonts } from './get-unique-fonts.js'
 export async function loadFonts(node: TextNode, uniqueFonts: Set<string>): Promise<void> {
 	const fonts = Array.from(uniqueFonts).map((fontString) => JSON.parse(fontString) as FontName)
 	await Promise.all(fonts.map((font) => figma.loadFontAsync(font)))

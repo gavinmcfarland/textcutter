@@ -1,5 +1,5 @@
 import { expect } from 'plugma/vitest'
-import { createTextNodes } from '../mocks/createTextNodes.js'
+import { createTextNodes } from '../mocks/create-text-nodes.js'
 
 export interface BaseTestCase {
 	name: string

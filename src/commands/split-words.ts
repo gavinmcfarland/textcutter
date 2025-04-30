@@ -1,8 +1,8 @@
-import { nodeInInstance } from '../utils/nodeInInstance.js'
-import { getUniqueFonts } from '../utils/getUniqueFonts.js'
-import { loadFonts } from '../utils/loadFonts.js'
-import { applyFormattingRanges } from '../utils/applyFormattingRanges.js'
-import { getFormattingRanges } from '../utils/getFormattingRanges.js'
+import { nodeInInstance } from '../utils/node-in-instance.js'
+import { getUniqueFonts } from '../utils/get-unique-fonts.js'
+import { loadFonts } from '../utils/load-fonts.js'
+import { applyFormattingRanges } from '../utils/apply-formatting-ranges.js'
+import { getFormattingRanges } from '../utils/get-formatting-ranges.js'
 
 /**
  * Split a text node into multiple text nodes, one for each word
