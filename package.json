@@ -1,15 +1,20 @@
 {
-	"type": "module",
-	"private": true,
-	"scripts": {
-		"dev": "plugma dev",
-		"build": "plugma build",
-		"preview": "plugma preview",
-		"release": "plugma release",
-		"test": "plugma test"
-	},
-	"dependencies": {
-		"@figma/plugin-typings": "^1.110.0",
-		"plugma": "^2.0.0-24"
-	}
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "plugma dev",
+    "build": "plugma build",
+    "preview": "plugma preview",
+    "release": "plugma release",
+    "test": "npx vitest"
+  },
+  "dependencies": {
+    "@figma/plugin-typings": "^1.110.0",
+    "plugma": "^2.0.0-24",
+    "vitest": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^3.1.2",
+    "prettier": "^3.5.3"
+  }
 }

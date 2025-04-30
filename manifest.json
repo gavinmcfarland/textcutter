@@ -3,6 +3,7 @@
 	"id": "739131137116544548",
 	"api": "1.0.0",
 	"main": "src/code.ts",
+	"ui": "src/ui.ts",
 	"editorType": ["figma"],
 	"documentAccess": "dynamic-page",
 	"menu": [
