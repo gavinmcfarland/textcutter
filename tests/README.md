@@ -2,19 +2,20 @@
 
 1. Open the Figma desktop app
 2. Open a blank Figma file
-3. To run tests first start the dev server with support for testing (`pnpm dev -ws -m test`):
+3. Make sure the plugin is open
+4. To run tests first start the dev server with support for testing (`pnpm dev -ws -m test`):
 
     ```bash
     pnpm dev:test
     ```
 
-4. Then run the test using Vitest (`npx vitest run`):
+5. Then run the test using Vitest (`npx vitest run`):
 
     ```bash
     pnpm test
     ```
 
-5. You can also run the test with the UI:
+6. You can also run the test with the UI:
 
     ```bash
     pnpm test:ui
