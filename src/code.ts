@@ -2,11 +2,7 @@ import { removeBullets } from './commands/remove-bullets.js'
 import { splitWords } from './commands/split-words.js'
 import { split } from './commands/split.js'
 import { join } from './commands/join.js'
-import { nodeInInstance } from './utils/node-in-instance.js'
-import { getUniqueFonts } from './utils/get-unique-fonts.js'
-import { loadFonts } from './utils/load-fonts.js'
-import { applyFormattingRanges } from './utils/apply-formatting-ranges.js'
-import { getFormattingRanges } from './utils/get-formatting-ranges.js'
+
 // @author Johan Ronsse
 // @version 3.0
 // @description
@@ -22,8 +18,7 @@ export default async function () {
 	console.clear()
 	console.log('Starting plugin')
 
-	console.log(process.env.NODE_ENV)
-
+	// Only show during testing
 	if (process.env.NODE_ENV === 'test') {
 		figma.showUI(__html__, { themeColors: true })
 	}
@@ -45,7 +40,10 @@ export default async function () {
 			message = await join(figma.command === 'joinWithBreaks')
 	}
 
-	// if (message) {
-	// 	figma.closePlugin(message)
-	// }
+	// Don't close during testing
+	if (process.env.NODE_ENV !== 'test') {
+		if (message) {
+			figma.closePlugin(message)
+		}
+	}
 }
