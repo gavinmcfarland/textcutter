@@ -1,0 +1,10 @@
+{
+	"command": "removeBullets",
+	"name": "remove bullets from a block of text",
+	"input": [
+		"• The orange cat jumped over the old wooden fence with grace.\n• By the riverbank, the mist rose slowly, touching the tips of the trees.\n• She found a hidden key under a pile of forgotten maps and old coins.\n• The clock struck midnight, signaling the beginning of an unexpected adventure."
+	],
+	"expected": [
+		"The orange cat jumped over the old wooden fence with grace.\nBy the riverbank, the mist rose slowly, touching the tips of the trees.\nShe found a hidden key under a pile of forgotten maps and old coins.\nThe clock struck midnight, signaling the beginning of an unexpected adventure."
+	]
+}

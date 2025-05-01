@@ -12,25 +12,28 @@ Next to the core the core command “Split text”, we've added three additional
 
 ## How to use
 
-* Split text
-    * Select a text layer with multiple lines of text
-    * Run the plugin
-    * Your results (new layers) will appear on your current page in the same spot
+- Split text
 
-* Join text
-    * Select multiple text layers (that are underneath each other)
-    * Run the plugin
-    * Your results (a merged layer) will appear on the page in the same spot
+    - Select a text layer with multiple lines of text
+    - Run the plugin
+    - Your results (new layers) will appear on your current page in the same spot
 
-* Split words
-    * Select a text layer with multiple words
-    * Run the "Split words" command
-    * Your results (new layers for each word) will appear on your current page in the same spot
+- Join text
 
-* Remove bullets
-    * Select one or multiple text layers containing bullet-like characters (such as •)
-    * Run the "Remove bullets" command
-    * The bullets will be removed from the text
+    - Select multiple text layers (that are underneath each other)
+    - Run the plugin
+    - Your results (a merged layer) will appear on the page in the same spot
+
+- Split words
+
+    - Select a text layer with multiple words
+    - Run the "Split words" command
+    - Your results (new layers for each word) will appear on your current page in the same spot
+
+- Remove bullets
+    - Select one or multiple text layers containing bullet-like characters (such as •)
+    - Run the "Remove bullets" command
+    - The bullets will be removed from the text
 
 ## A tip
 

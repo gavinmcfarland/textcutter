@@ -1,0 +1,6 @@
+{
+	"command": "split",
+	"name": "split single line of text",
+	"input": ["Testing single line of text"],
+	"expected": ["Testing single line of text"]
+}

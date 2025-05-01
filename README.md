@@ -14,8 +14,8 @@ This plugin was created with [Plugma](https://github.com/gavinmcfarland/plugma) 
 1. Install the dependencies and watch for changes while developing:
 
     ```bash
-    npm install
-    npm run dev
+    pnpm install
+    pnpm dev
     ```
 
 2. Open the Figma desktop app and import the plugin:
@@ -31,17 +31,37 @@ This plugin was created with [Plugma](https://github.com/gavinmcfarland/plugma) 
 Run this command to preview your plugin in the browser during development.
 
 ```bash
-npm run preview
+pnpm preview
 ```
 
 _Make sure the plugin is open in the Figma desktop app._
+
+### Testing
+
+Start the dev server in testing mode.
+
+```bash
+pnpm dev:test
+```
+
+Run the tests.
+
+```bash
+pnpm test
+```
+
+Or with run tests using the UI.
+
+```bash
+pnpm test:ui
+```
 
 ### Before Publishing
 
 Before publishing your plugin, make sure to create a build. If not, it will still point to the dev server and won't work properly for users.
 
 ```bash
-npm run build
+pnpm build
 ```
 
 Now you can publish the plugin from the Figma desktop app.

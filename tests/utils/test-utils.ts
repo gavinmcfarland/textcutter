@@ -2,6 +2,7 @@ import { expect } from 'plugma/vitest'
 import { createTextNodes } from '../mocks/create-text-nodes.js'
 
 export interface BaseTestCase {
+	command: string
 	name: string
 	input: string[]
 	expected: string[]
@@ -12,10 +13,10 @@ export async function runTextCommandTest<T extends BaseTestCase>(
 	testCase: T,
 	commandFn: (params?: any) => Promise<any>,
 ) {
-	// Clear the page
 	figma.currentPage.children.forEach((node) => {
 		node.remove()
 	})
+	console.log('Cleared page')
 
 	// Load fonts
 	await Promise.all([
@@ -26,17 +27,19 @@ export async function runTextCommandTest<T extends BaseTestCase>(
 	])
 
 	const textNodes = createTextNodes(testCase.input)
+	console.log('Created text nodes')
 	figma.currentPage.selection = textNodes
-
+	console.log('Set selection')
 	// Execute the command with parameters if they exist
 	if (testCase.parameters) {
 		await commandFn(testCase.parameters)
 	} else {
 		await commandFn()
 	}
+	console.log('Executed command', testCase.command)
 
 	const selection = figma.currentPage.children
-
+	console.log('Got selection')
 	// Check that we have the correct number of text nodes after operation
 	expect(selection.length).toBe(testCase.expected.length)
 

@@ -1,0 +1,23 @@
+{
+	"command": "splitWords",
+	"name": "split line of text into words",
+	"input": ["This is an example of a line of text that we want to split into words."],
+	"expected": [
+		"This",
+		"is",
+		"an",
+		"example",
+		"of",
+		"a",
+		"line",
+		"of",
+		"text",
+		"that",
+		"we",
+		"want",
+		"to",
+		"split",
+		"into",
+		"words."
+	]
+}
