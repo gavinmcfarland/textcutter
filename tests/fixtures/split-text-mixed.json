@@ -1,0 +1,6 @@
+{
+	"command": "split",
+	"name": "split block of text into lines of text - mixed",
+	"input": ["line one\n\rline two\r\nline three\rline four\n"],
+	"expected": ["line one", "line two", "line three", "line four"]
+}

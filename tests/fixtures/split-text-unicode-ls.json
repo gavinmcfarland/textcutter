@@ -1,0 +1,6 @@
+{
+	"command": "split",
+	"name": "split block of text into lines of text - unicode LS",
+	"input": ["line one\u2028line two\u2028line three\u2028line four"],
+	"expected": ["line one", "line two", "line three", "line four"]
+}

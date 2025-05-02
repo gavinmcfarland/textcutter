@@ -1,0 +1,6 @@
+{
+	"command": "splitWords",
+	"name": "split line of text into words (multiple selection)",
+	"input": ["One two three four", "five six seven eight"],
+	"expected": ["One", "two", "three", "four", "five", "six", "seven", "eight"]
+}

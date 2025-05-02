@@ -1,0 +1,6 @@
+{
+	"command": "split",
+	"name": "split block of text into lines of text (multiple selection)",
+	"input": ["One\nTwo\nThree\nFour", "Five\nSix\nSeven\nEight"],
+	"expected": ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"]
+}

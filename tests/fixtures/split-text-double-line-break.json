@@ -1,0 +1,6 @@
+{
+	"command": "split",
+	"name": "split block of text into lines of text - double line break",
+	"input": ["this\n\nis\ndouble"],
+	"expected": ["this", "", "is", "double"]
+}

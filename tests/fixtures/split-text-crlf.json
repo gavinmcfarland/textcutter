@@ -1,0 +1,6 @@
+{
+	"command": "split",
+	"name": "split block of text into lines of text - crlf",
+	"input": ["line one\r\nline two\r\nline three\r\nline four"],
+	"expected": ["line one", "line two", "line three", "line four"]
+}
