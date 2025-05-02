@@ -14,6 +14,8 @@ interface InputPromptResult {
 /**
  * Displays a UI prompt with a series of questions and returns the user's selections.
  *
+ * If using this while the UI is open and you want the original UI to reopen, you have to call `figma.showUI(__html__)` again.
+ *
  * @example
  * ```typescript
  * const questions = [
@@ -103,8 +105,6 @@ export async function inputPrompt(questions: Question[]): Promise<InputPromptRes
 	})
 
 	const result = await choicePromise
-
-	figma.showUI(__html__)
 
 	return result
 }
