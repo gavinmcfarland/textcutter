@@ -1,4 +1,6 @@
-# Tests
+# Testing
+
+## Running tests
 
 1. Open the Figma desktop app
 2. Open a blank Figma file
@@ -21,9 +23,27 @@
     pnpm test:ui
     ```
 
-## Gotchas
+## Writing tests
 
-### Plugma bugs
+The default test file is `text-commands.test.ts`. This test will itterate over all the fixtures in the `fixtures` folder which covers all the text commands.
+
+To create a new text command test, create a new file in the `fixtures` folder and add the following:
+
+```ts
+{
+    "command": "join" | "split" | "splitWords" | "removeBullets",
+    "name": string,
+    "input": string[],
+    "expected": string[]
+}
+```
+
+- `command` is the command to be tested.
+- `name` is the name of the test.
+- `input` is the array of text nodes that will be created by the test.
+- `expected` is the array of text nodes that should be created as a result of the command.
+
+## Gotchas
 
 Plugma is still in beta and has some bugs.
 
